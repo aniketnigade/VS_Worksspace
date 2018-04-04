@@ -1,0 +1,149 @@
+<!doctypes html>
+<html>
+
+<head>
+    <title>My First Web PAge</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" rel="text/javascript" />
+    <link href="content/app.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.10.2.js" type="application/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.0.3/angular-sanitize.js"></script>
+    <script src="scripts/app.js" type="application/javascript"></script>
+    <script src="scripts/MainController.js" type="application/javascript"></script>
+</head>
+
+<body onload="onLoad()" ng-app="angularApp">
+    <!-- refernce this to our module -->
+    <div ng-controller="MainController">
+        <header class="container-fluid">
+            <h1>Visit Anytown, USA!</h1>
+        </header>
+
+        <nav class="container-fluid">
+            <ul class="nav navbar-inverse navbar-nav">
+                <li class="active">
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="https://www.booking.com/searchresults.html?aid=339463;label=msn-GCANE2xjX3DXDyrTBvINFA-16815854899%3Atikwd-16806490953%3Aloc-90%3Aneo%3Amte%3Adec%3Aqsamazing%20places;sid=98e8ff646cb24f0656435bc2ee41d408;city=-2598161;expand_sb=1;highlighted_hotels=1160538;hlrd=no_dates;keep_landing=1;redirected=1;source=hotel&utm_campaign=Hotel%20-%20United%20Kingdom%20-%202&utm_medium=cpc&utm_source=bing&utm_term=GCANE2xjX3DXDyrTBvINFA%3Fmsclkid%3D018bde4d2ce81f55aa79842261e03a4a&">Amazing Places</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>></li>
+            </ul>
+        </nav>
+        <!-- <img src="images/1.jpg"/> -->
+        <div class="container-fluid">
+            <div class="row">
+                <!-- <a href = "https://www.microsoft.com/en-in"><img src="images/microsoftlogo.png" /></a> -->
+                <section class="col-sm-6 col-sm-push-3">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <input ng-model="smallnumber" type="number">
+                            <p id={{ theMessage }}></p>
+                            <button ng-click="checkNumber()">Submit</button>
+                        </div>
+                        <div class="col-sm-8">
+                            <label>FirstName</label>
+                            <input ng-model="User.firstName" type="text" ng-model-options={getterSetter:true} />
+                            </br>
+                            <label>LastName</label>
+                            <input ng-model="User.lastName" type="text" ng-model-options={getterSetter:true} />
+                            </br>
+                            <label>FullName</label>
+                            <span ng-bind="User.fullName()"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <article>
+                            <h2> Amazing Museums</h2>
+                            <div class="col-sm-3">
+                                <img src="images/museum.jpg" />
+                            </div>
+                            <div class="col-sm-9">
+                                <p>While most museums are a collection of old artifacts and stuff that no one is really interested
+                                    in seeing, our musuems are the best of the best.</p>
+                                <p> You won't find anything like these any where else in the world. Our museums rival that of
+                                    our closest competitors including the Museum of Bad Art, the Paris Sewers Musuem and
+                                    the Museum of Broken Relationships.</p>
+                                <p>Come check them out...the fun is waiting for you.</p>
+                            </div>
+                        </article>
+                        <article>
+                            <h2>Splash Canyone Waterpark
+                            </h2>
+                            <div class="col-sm-3">
+                                <img src="images/waterpark.jpeg" />
+                            </div>
+                            <div class="col-sm-9">
+                                <p>Our waterpark is the biggest and best park in the Western World. Just south of interstate
+                                    2015, you'll find a sweet mix of Super Slides and lazy rivers.</p>
+                                <p> If that wasn't enough, we have 376 of the best food trucks in the state serving everything
+                                    from fried gummy bears to lemonade and pizza. Don't forget if you buy our collectors
+                                    edition souvenir water park keepsake, you get free refills all year.</p>
+                                <p>we wouldn't be SplashAnyone without the rules about splashing ... wait there are no rules.</p>
+                            </div>
+                        </article>
+                        <article>
+                            <h2>Best Zoo in Town</h2>
+                            <div class="col-sm-3">
+                                <img src="images/zoo.jpeg" />
+                            </div>
+                            <div class="col-sm-9">
+                                <p>Finally, you won't want to miss out cuddly little zoo animals. Lions, tigers and bears...Oh
+                                    My! We have the largest selection of born in captivity animals. We didn't want to take
+                                    the from their natural habitat, so we just got them from the other zoos in the state.</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <aside class="col-sm-3 col-sm-pull-6">
+                    <h2 class="title">Thinks to Do</h2>
+                    <ul>
+                        <li>
+                            <a href="https://www.rei.com/adventures/trips/hiking">Hiking</a>
+                        </li>
+                        <li>
+                            <a href="https://www.bikemag.com/">Biking</a>
+                        </li>
+                        <li>
+                            <a href="https://horseback.com.au/winery-tours/">Horseback</a</li>
+                                <li>
+                                    <a href="https://www.backpacker.com/">Backpacking</a>
+                                </li>
+                    </ul>
+                </aside>
+                <aside class="col-sm-3">
+                    <h2>How to Get Here</h2>
+                    <ol id="orderdlist">
+                        <li> By Plane </li>
+                        <li> By Train </li>
+                        <li> By Automobile </li>
+                        <li> By Boat </li>
+                    </ol>
+                </aside>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6 col-sm-push-3" </div>
+                        <div class="col-sm-6 col-sm-pull-3">
+                            <a name="contact">Contact Us</a>
+                            <p>Anytime Chamber of Commerce</p>
+                            <p>375 Vetal maharj soci.</p>
+                            <p>India , MH 411027</p>
+                        </div>
+                    </div>
+
+                    <footer class="container-fluid">
+                        Copyright 2018
+                        <p>{{ timestamp }}</p>
+                    </footer>
+                </div>
+            </div>
+
+            <!-- extra stuff  -->
+</body>
+
+</html>

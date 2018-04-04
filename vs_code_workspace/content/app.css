@@ -1,0 +1,31 @@
+header , footer{
+    background-color:grey;
+    color:whitesmoke;
+    text-align: center;
+    padding: 20px;
+}
+aside{
+    font-weight: bold;
+    padding: 10px;
+}
+.title{
+color: darkblue;
+}
+#orderdlist{
+color: darkgreen;
+}
+nav{
+    background-color: #222;
+}
+section,article{
+    padding: 10px;
+    background-color: #eee;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+label{
+    padding: 0 10px;
+    width : 100px;
+}
